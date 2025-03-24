@@ -1,0 +1,37 @@
+{
+  "name": "obsidian-icloud-mcp",
+  "version": "1.0.0",
+  "description": "Connecting your Obsidian Vaults to AI using the Model Context Protocol (MCP).",
+  "type": "module",
+  "bin": {
+    "obsidian-icloud-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "watch": "pnpm nodemon --watch src --ext ts --exec \"pnpm run build\"",
+    "build": "rimraf build && tsc && chmod 755 build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "Obsidian",
+    "MCP"
+  ],
+  "author": "Yancey Leo",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "glob": "^11.0.1",
+    "mime": "^4.0.6",
+    "zod": "^3.24.2",
+    "zod-to-json-schema": "^3.24.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.2"
+  }
+}
