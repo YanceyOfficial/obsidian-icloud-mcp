@@ -35,7 +35,7 @@ export const createDirectoryPrompt = () =>
   'structures for projects or ensuring required paths exist. Only works within allowed directories.'
 
 export const listDirectoryPrompt = (rootPaths: string[]) =>
-  `Your task is to list directory from ${rootPaths.join(', ')}. ` +
+  `Your task is to list directory under ${rootPaths.join(', ')}. ` +
   'Get a detailed listing of all files and directories in a specified path. ' +
   'Results clearly distinguish between files and directories with [FILE] and [DIR] ' +
   'prefixes. This tool is essential for understanding directory structure and ' +

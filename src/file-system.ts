@@ -130,7 +130,7 @@ export async function getDirectoryTree(
         }
       }
       return node
-    } catch (error: any) {
+    } catch (error) {
       console.error(
         `Error reading directory ${currentPath}:`,
         error instanceof Error ? error.message : error
